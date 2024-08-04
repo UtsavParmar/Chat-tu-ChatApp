@@ -1,0 +1,84 @@
+#root {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+  /* text-align: center; */
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+.upshadow1 {
+  background: #18181b;
+  border-radius: 20px;
+  box-shadow: -5px 5px 10px #0c0c0e, 5px -5px 10px #242428;
+}
+.shadow1 {
+  width: 100%;
+  /* margin: 0.6rem 0; */
+  border-radius: 12px;
+  background: #242424;
+  box-shadow: inset -5px 5px 5px #151515, inset 5px -5px 5px #333333;
+}
+
+.shadow1 input {
+  width: 100%;
+  border: none;
+  outline: none;
+
+  background: none;
+  font-size: 1rem;
+  color: #ffffff;
+  padding: 0.9rem 0.9rem;
+}
+.Logout:hover {
+  border-radius: 12px;
+  /* background: #80af81; */
+  box-shadow: -1px 1px 5px #8b0000, 1px -1px 5px #ff6347;
+}
+.prof-shadow {
+  background: #18181b;
+  width: 3.3rem;
+  height: 3.3rem;
+  box-shadow: -5px 5px 10px #0a0a0b, 5px -5px 10px #26262b;
+}
+.online {
+  width: 6px;
+  height: 6px;
+  /* border: 2px solid rgb(48, 249, 75); */
+  border-radius: 50%;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transform: translate(40%, -40%);
+  background-color: rgb(48, 249, 75);
+}
+.circle {
+  width: 65px;
+}
+button:hover {
+  border-radius: 50px;
+  background: #242424;
+  box-shadow: inset -4px 4px 8px #0c0c0e, inset 4px -4px 8px #242428;
+}
+/* ===== Scrollbar CSS ===== */
+/* *{
+  scrollbar-width: thin;
+  scrollbar-color: #fff #242424;
+} */
+*::-webkit-scrollbar {
+  width: 8px;  
+               /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: #242424;
+  border-radius: 10px;        /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #fff;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid #242424;  /* creates padding around scroll thumb */
+}
