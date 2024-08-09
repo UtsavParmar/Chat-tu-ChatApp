@@ -15,19 +15,19 @@ export const SocketContextProvider = ({ children }) => {
 
   useEffect(() => {
     if (authUser) {
-      const socket = io("http://localhost:8000/", {
-        query: {
-          userId: authUser._id,
-        },
+      const newSocket = io("http://localhost:8000/", {
+        query: { userId: authUser._id },
       });
 
-      setSocket(socket);
+      setSocket(newSocket);
 
-      socket.on("getOnlineUsers", (users) => {
+      newSocket.on("getOnlineUsers", (users) => {
         setOnlineUsers(users);
       });
 
-      return () => socket.close();
+      return () => {
+        newSocket.close();
+      };
     } else {
       if (socket) {
         socket.close();
@@ -42,3 +42,4 @@ export const SocketContextProvider = ({ children }) => {
     </SocketContext.Provider>
   );
 };
+
