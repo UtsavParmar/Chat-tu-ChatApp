@@ -67,7 +67,7 @@ const MsgContainer = () => {
 
   const handleDeleteMessage = (messageId) => {
     setMessages(messages.filter((message) => message._id !== messageId));
-    // Emit an event to notify other clients about the message deletion
+    
     socket.emit("deleteMessage", { messageId });
   };
 
