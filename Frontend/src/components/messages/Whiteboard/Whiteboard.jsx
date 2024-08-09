@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import CanvasDraw from "re"      
+import CanvasDraw from "react-canvas-draw"      
 import { useSocketContext } from "../../../context/SocketContext";
 import { useSelectedContext } from "../../../context/SelectedContext";
 
