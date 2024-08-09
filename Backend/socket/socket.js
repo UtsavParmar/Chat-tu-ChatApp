@@ -52,16 +52,16 @@ io.on("connection", (socket) => {
     }
   });
 
-  // // Drawing
-  // socket.on("drawing", (data) => {
-  //   const recipientSocketId = userSocketMap[data.conversationId];
-  //   if (recipientSocketId) {
-  //     io.to(recipientSocketId).emit("drawing", {
-  //       conversationId: userId,
-  //       canvasData: data.canvasData,
-  //     });
-  //   }
-  // });
+  // Drawing
+  socket.on("drawing", (data) => {
+    const recipientSocketId = userSocketMap[data.conversationId];
+    if (recipientSocketId) {
+      io.to(recipientSocketId).emit("drawing", {
+        conversationId: userId,
+        canvasData: data.canvasData,
+      });
+    }
+  });
 
   socket.on("deleteMessage", async ({ messageId }) => {
     try {
