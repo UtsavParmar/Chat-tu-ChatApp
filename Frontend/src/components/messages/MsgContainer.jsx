@@ -24,7 +24,7 @@ const MsgContainer = () => {
     if (selectedConversation) {
       const fetchMessages = async () => {
         try {
-          const response = await axios.get(`http://localhost:8000/messages/${selectedConversation._id}`);
+          const response = await axios.get(`https://chat-tu-chat-app-utsav.onrender.com/messages/${selectedConversation._id}`);
           setMessages(response.data);
         } catch (error) {
           console.error("Error fetching messages:", error);

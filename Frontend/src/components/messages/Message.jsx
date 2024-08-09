@@ -7,7 +7,7 @@ import { MdDelete } from "react-icons/md";
 import axios from 'axios';
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:8000");
+const socket = io("https://chat-tu-chat-app-utsav.onrender.com/");
 
 const Message = ({ message, onDelete }) => {
   const { authUser } = useAuthContext();
@@ -25,7 +25,7 @@ const Message = ({ message, onDelete }) => {
       socket.emit("deleteMessage", { messageId, conversationId: selectedConversation._id });
 
       // Optionally, you could also call an API to delete the message on the server
-      await axios.delete(`http://localhost:8000/messages/delete/${messageId}`);
+      await axios.delete(`https://chat-tu-chat-app-utsav.onrender.com/messages/delete/${messageId}`);
       
       // Notify the parent component about the deletion
       onDelete(messageId); 
