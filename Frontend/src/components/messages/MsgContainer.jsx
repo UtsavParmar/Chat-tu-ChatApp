@@ -88,14 +88,14 @@ const MsgContainer = () => {
                   <p className="p-[0.34rem]"> </p>
                 )}
               </div>
-              {/* <button
+              <button
                 className="text-white text-xs px-2 py-1 rounded hover:bg-gray-500 transition"
                 onClick={toggleWhiteboard}
               >
                 {showWhiteboard ? "Hide Whiteboard" : "Show Whiteboard"}
-              </button> */}
+              </button>
             </div>
-            {/* {showWhiteboard && <Whiteboard isVisible={showWhiteboard} />} */}
+            {showWhiteboard && <Whiteboard isVisible={showWhiteboard} />}
             
             <Messages onDeleteMessage={handleDeleteMessage} />
             <MessageInput />
