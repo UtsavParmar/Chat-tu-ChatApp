@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
-import CanvasDraw from "react-canvas-draw"        
-import { useSocketContext } from "../../context/SocketContext";
-import { useSelectedContext } from "../../context/SelectedContext";
+import CanvasDraw from "re"      
+import { useSocketContext } from "../../../context/SocketContext";
+import { useSelectedContext } from "../../../context/SelectedContext";
 
 
 const Whiteboard = ({ isVisible }) => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Messages from "./Messages";
 import MessageInput from "./MessageInput";
-import Whiteboard from "../Whiteboard/Whiteboard.jsx";
+import Whiteboard from "./Whiteboard/Whiteboard";
 import { TiMessages } from "react-icons/ti";
 import { useSelectedContext } from "../../context/SelectedContext";
 import { useAuthContext } from "../../context/AuthContext";
