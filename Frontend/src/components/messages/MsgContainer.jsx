@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Messages from "./Messages";
 import MessageInput from "./MessageInput";
-import Whiteboard from "./Whiteboard/Whiteboard";
+// import Whiteboard from "./Whiteboard/Whiteboard";
 import { TiMessages } from "react-icons/ti";
 import { useSelectedContext } from "../../context/SelectedContext";
 import { useAuthContext } from "../../context/AuthContext";
@@ -14,7 +14,7 @@ const MsgContainer = () => {
   
   const [messages, setMessages] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
-  const [showWhiteboard, setShowWhiteboard] = useState(false);
+  // const [showWhiteboard, setShowWhiteboard] = useState(false);
 
   useEffect(() => {
     return setSelectedConversation(null);
@@ -61,9 +61,9 @@ const MsgContainer = () => {
     };
   }, [socket, selectedConversation?._id]);
 
-  const toggleWhiteboard = () => {
-    setShowWhiteboard(prev => !prev);
-  };
+  // const toggleWhiteboard = () => {
+  //   setShowWhiteboard(prev => !prev);
+  // };
 
   const handleDeleteMessage = (messageId) => {
     setMessages(messages.filter((message) => message._id !== messageId));
@@ -88,14 +88,15 @@ const MsgContainer = () => {
                   <p className="p-[0.34rem]"> </p>
                 )}
               </div>
-              <button
+              {/* <button
                 className="text-white text-xs px-2 py-1 rounded hover:bg-gray-500 transition"
                 onClick={toggleWhiteboard}
               >
                 {showWhiteboard ? "Hide Whiteboard" : "Show Whiteboard"}
-              </button>
+              </button> */}
             </div>
-            {showWhiteboard && <Whiteboard isVisible={showWhiteboard} />}
+            {/* {showWhiteboard && <Whiteboard isVisible={showWhiteboard} />} */}
+            
             <Messages onDeleteMessage={handleDeleteMessage} />
             <MessageInput />
           </>
